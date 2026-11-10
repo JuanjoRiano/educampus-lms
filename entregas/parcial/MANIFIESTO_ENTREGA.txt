@@ -1,0 +1,13 @@
+MANIFIESTO — ENTREGA PARCIAL EDUCAMPUS LMS · GRUPO 5
+Fecha de entrega prevista: 10/11/2026
+Caso: Grupo 5 — EduCampus LMS.
+
+Entregables de la sección 3.A de la guía: SRS (5 RF y 5 RNF cuantificables); Product Backlog (mínimo 8 HU con criterios); diagrama de contexto; diagrama de casos de uso y especificación textual del caso principal; diagrama de actividades con carriles y concurrencia.
+
+Complementos incluidos: Acta Scrum, registro de decisiones, formulario de aprobación del SRS, modelo de dominio conceptual, presentación, guion y preguntas de defensa.
+
+Firmas: se insertaron las imágenes de Laura Vargas, Juan Tibatá y Juan Riaño en los bloques de aceptación de los documentos correspondientes. Las fechas junto a las firmas se dejaron en blanco para completar según la fecha efectiva de firma.
+
+El PDF consolidado incorpora las versiones firmadas de acta, SRS, backlog, CU-02, resumen de modelos, registro de decisiones y formulario de aprobación.
+
+El prototipo cloud, pruebas unitarias/de integración, McCabe, DRE e informe final SQA corresponden a las fases posteriores.

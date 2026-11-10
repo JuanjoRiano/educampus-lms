@@ -1,0 +1,29 @@
+digraph Domain {
+ graph [rankdir=LR, bgcolor="white", pad="0.25", nodesep="0.35", ranksep="0.60", splines=polyline, fontname="DejaVu Sans", label="Modelo de dominio conceptual · EduCampus LMS", labelloc=t, fontsize=22, fontcolor="#0B3551"];
+ node [shape=record, style="rounded,filled", fillcolor="#EAF3F8", color="#145C79", penwidth=1.4, fontname="DejaVu Sans", fontsize=10, fontcolor="#17384D", margin="0.12,0.08"];
+ edge [color="#415268", penwidth=1.2, arrowsize=0.75, fontname="DejaVu Sans", fontsize=9, fontcolor="#415268"];
+ Estudiante [label="{Estudiante|idEstudiante\lcodigo\lnombre\l}"];
+ Docente [label="{Docente|idDocente\lnombre\l}"];
+ Periodo [label="{PeriodoAcademico|idPeriodo\lnombre\lestado\l}"];
+ Asignatura [label="{Asignatura|idAsignatura\lcodigo\lnombre\l}"];
+ Oferta [label="{OfertaAsignatura|idOferta\lcupoTotal\lcupoDisponible\lhorario\lestado\l}"];
+ Inscripcion [label="{Inscripcion|idInscripcion\lfecha\lestado\l}"];
+ Sesion [label="{SesionClase|idSesion\linicio\lfin\lestado\l}"];
+ Asistencia [label="{RegistroAsistencia|eventId\lfechaHora\lestatus\l}"];
+ Examen [label="{Examen|idExamen\lapertura\lcierre\l}"];
+ Intento [label="{IntentoExamen|idIntento\linicio\lenviado\lcalificacion\l}"];
+ Respuesta [label="{Respuesta|idRespuesta\lcontenido\lesCorrecta\l}"];
+ Alerta [label="{AlertaRevision|idAlerta\ltipo\lestatusRevision\l}"];
+ Estudiante -> Inscripcion [label="1      0..*"];
+ Oferta -> Inscripcion [label="1      0..*"];
+ Periodo -> Oferta [label="1      0..*"];
+ Asignatura -> Oferta [label="1      0..*"];
+ Docente -> Oferta [label="1      0..*"];
+ Oferta -> Sesion [label="1      0..*"];
+ Estudiante -> Asistencia [label="1      0..*"];
+ Sesion -> Asistencia [label="1      0..*"];
+ Estudiante -> Intento [label="1      0..*"];
+ Examen -> Intento [label="1      0..*"];
+ Intento -> Respuesta [label="1      1..*"];
+ Intento -> Alerta [label="1      0..*"];
+}

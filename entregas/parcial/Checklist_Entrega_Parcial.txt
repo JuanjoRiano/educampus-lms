@@ -1,0 +1,22 @@
+EDUCAMPUS LMS — GRUPO 5
+CHECKLIST DE ENTREGA PARCIAL · SESIÓN 3 · 10/11/2026
+
+DOCUMENTOS INCLUIDOS
+[LISTO] Acta Scrum 01 — reunión 07/11/2026, 10:00 a. m., Microsoft Teams; firmas insertadas.
+[LISTO] SRS v0.5 con 5 RF y 5 RNF cuantificables; firmas insertadas.
+[LISTO] Formulario de aprobación del SRS; firmas insertadas.
+[LISTO] Product Backlog con 8 historias y criterios de aceptación; firmas insertadas.
+[LISTO] Diagrama de contexto.
+[LISTO] Diagrama de casos de uso.
+[LISTO] Especificación textual CU-02 — Inscribir asignatura; firmas insertadas.
+[LISTO] Diagrama de actividades con carriles y fork/join.
+[COMPLEMENTARIO] Modelo de dominio conceptual.
+[LISTO] Registro de decisiones y resumen de modelos; firmas insertadas.
+[LISTO] Presentación, guion y preguntas probables.
+
+REVISIÓN FINAL
+[REVISAR] Completar las fechas junto a cada firma, conforme a la fecha efectiva en que cada integrante firmó.
+[REVISAR] Confirmar que el tablero Trello esté accesible para los tres integrantes.
+[REVISAR] Abrir el PDF consolidado y comprobar su legibilidad antes de enviarlo.
+
+NOTA: Las firmas son imágenes manuscritas insertadas; no constituyen una firma digital criptográfica. El prototipo, pruebas, McCabe, DRE y despliegue cloud corresponden a fases posteriores.

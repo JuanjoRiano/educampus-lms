@@ -1,0 +1,15 @@
+EDUCAMPUS LMS — GRUPO 5
+PAQUETE CON FIRMAS INSERTADAS
+
+Se insertaron las imágenes de firma proporcionadas para:
+- Laura Vargas — Product Owner
+- Juan Tibatá — Scrum Master
+- Juan Riaño — Developer
+
+Las firmas se normalizaron para tener una altura visual uniforme, conservando su proporción y trazo. Se colocaron en los bloques de aceptación del Acta Scrum, Registro de Decisiones, Product Backlog, SRS, Formulario de Aprobación, especificación CU-02 y Resumen de Modelos.
+
+Los campos de fecha al lado de cada firma se dejaron en blanco porque no se proporcionó la fecha de estampado individual. Completar esas fechas según corresponda.
+
+IMPORTANTE: son imágenes de firmas manuscritas insertadas en los documentos; no son firmas digitales criptográficas ni certificados de firma electrónica.
+
+El PDF consolidado está actualizado e incluye las páginas firmadas. La presentación no lleva firmas porque no contiene un bloque de aceptación.

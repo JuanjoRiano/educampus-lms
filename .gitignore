@@ -1,0 +1,28 @@
+# Credenciales
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Temporales
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+*~
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Node
+node_modules/
+dist/
+coverage/
+
+# Editores
+.vscode/
+.idea/
