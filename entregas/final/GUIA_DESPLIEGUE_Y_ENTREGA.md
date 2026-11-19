@@ -7,7 +7,7 @@
 - Prototipo CU-02 implementado y probado localmente.
 - Diagramas de secuencia, clases y estados disponibles en PDF, SVG y fuentes editables.
 - 26/26 pruebas automatizadas satisfactorias; 12/12 accesos indebidos rechazados; 20/20 operaciones inválidas sin cambios parciales. `calidad/resultados_qa.json` registra los resultados medidos.
-- Cloud: **NO desplegado ni verificado por el asistente**. La URL, captura y prueba de 30 minutos deben obtenerse desde la cuenta de un integrante.
+- Cloud: **desplegado en Render y documentado por el equipo** en https://educampus-lms-demo.onrender.com. Las capturas y las 30 observaciones de salud HTTP 200 son aportadas por el usuario; no se afirma auditoría independiente ni disponibilidad permanente.
 - RF-04 y RF-05: modelados en la primera entrega, no implementados en el prototipo principal.
 - DRE: no calculable con el historial disponible. Temporizador `after(30s)` del modelo de estados: propuesto, no implementado.
 
@@ -59,13 +59,13 @@ python3 scripts/qa_checks.py
 5. Ejecutar una matrícula con Ana y capturar evidencia del resultado real. Si se agotó la oferta en el entorno efímero, reiniciar/deplegar nuevamente el prototipo para repoblar los datos ficticios.
 6. Escribir la URL **verificada** y la fecha en el siguiente espacio, y añadir capturas de la demo cloud al directorio `entregas/final/evidencia_cloud/`.
 
-**URL real de Render:** ______________________________________________
+**URL real de Render:** https://educampus-lms-demo.onrender.com
 
-**Fecha y persona que verificó:** _____________________________________
+**Fecha de la observación:** 18-11-2026 (hora Colombia); persona no consignada.
 
-**Evidencia GET /api/health:** ________________________________________
+**Evidencia GET /api/health:** calidad/observacion_cloud_30min.json (30/30).
 
-**Captura de matrícula confirmada:** __________________________________
+**Capturas funcionales:** entregas/final/evidencia_cloud/inscripciónConfirmada.png y bloqueoFinanciero.png.
 
 Advertencia: en un servicio de plan gratuito Render, el sistema de archivos efímero no garantiza persistencia. Esta versión no está diseñada para usuarios reales ni datos sensibles.
 
@@ -78,12 +78,12 @@ cd prototipo
 python3 scripts/monitor_cloud.py https://URL-REAL.onrender.com --output ../calidad/observacion_cloud_30min.json
 ```
 
-**Solo después** se podrá afirmar si hubo al menos 29 de 30 respuestas correctas durante la ventana de 30 minutos. El chequeo corto de salud local no basta para esa conclusión.
+**Prueba ya ejecutada por el equipo:** 30/30 respuestas HTTP 200 durante 1.800 s, por encima del umbral RNF-02 de 29/30. Archivo original: calidad/observacion_cloud_30min.json. No repetir salvo que se requiera una nueva observación.
 
 ## 5. Entrega, rúbrica y defensa
 
 - Abrir `entregas/final/Dossier_Tecnico_Final_EduCampus_Grupo5_2026-11-18.pdf` para el diseño UML y QA. El código y las pruebas se entregan vía GitHub.
-- Abrir `entregas/final/Presentacion_Final_EduCampus_Grupo5_2026-11-19.pptx` para la sustentación. La demo en vivo requiere enlace público real.
+- Abrir `entregas/final/Presentacion_Final_EduCampus_Grupo5_2026-11-19.pptx` para la sustentación. La demo en vivo ya dispone de enlace público documentado; verificar funcionamiento inmediatamente antes de la presentación.
 - Leer `entregas/final/Guion_Defensa_Final_15_Minutos.md` y ensayar el recorrido.
 - Revisar fecha/hora, formato exacto y método de entrega final en Teams, pues solo la guía institucional de seis sesiones está disponible aquí; **no se confirmó una instrucción específica nueva para esta segunda entrega**.
 - Mantener el repositorio privado si conserva firmas manuscritas en los PDF/DOCX originales. No publicar dichas firmas en repositorios públicos.

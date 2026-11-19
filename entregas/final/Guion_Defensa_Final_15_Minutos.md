@@ -1,6 +1,6 @@
 # EduCampus LMS — Guion de sustentación final (15 minutos)
 
-**Objetivo:** explicar decisiones técnicas y demostrar el CU-02 en vivo sin atribuir al sistema funcionalidades que todavía no se han programado. **No inventar una URL de nube.**
+**Objetivo:** explicar decisiones técnicas y demostrar el CU-02 en vivo sin atribuir al sistema funcionalidades que todavía no se han programado. **URL cloud documentada:** https://educampus-lms-demo.onrender.com. Demostración con datos ficticios.
 
 | Diapositiva | Tiempo sugerido | Integrante | Idea principal |
 |---|---|---|---|
@@ -14,8 +14,9 @@
 | 8 | 09:40–10:45 | Juan Riaño | Casos A1–A6, respuesta del simulador y ausencia de cambios parciales. |
 | 9 | 10:45–12:10 | Juan Tibatá | 26 pruebas; RNF-01/03/04/05 y límites de medición. |
 | 10 | 12:10–13:20 | Juan Tibatá | McCabe, DRE no calculable, riesgos técnicos. |
-| 11 | 13:20–14:30 | Laura | Cumplimientos, pendientes cloud y cierre. |
-| Reserva | 14:30–15:00 | Equipo | Margen para cambios de pantalla o una pregunta. |
+| 11 | 13:20–14:00 | Juan Riaño | Capturas de matrícula confirmada y rechazo financiero. |
+| 12 | 14:00–14:40 | Laura | Cumplimientos, evidencia cloud y cierre. |
+| Reserva | 14:40–15:00 | Equipo | Margen para cambios de pantalla o una pregunta. |
 
 ## Texto base de intervención
 
@@ -27,15 +28,15 @@
 
 **Juan Riaño · clases y estados:** “El servicio contiene un validador, una interfaz para el sistema financiero y un repositorio. La implementación utiliza un adaptador financiero simulado. El estado compuesto VALIDANDO representa las dos comprobaciones. `after(30s)` pertenece al diseño de un manejo futuro de timeout; esta versión ya rechaza respuestas no disponibles, pero no implementa un temporizador asíncrono de 30 segundos.”
 
-**Juan Riaño · demo:** “Ingreso con Ana, consulto el periodo y elijo OF-101. Antes había 19 cupos y después habrá 18, salvo que se haya realizado una matrícula anterior en este entorno. Al confirmar obtengo estado CONFIRMADA. Repito la solicitud para probar que el sistema rechaza la duplicidad sin descontar otro cupo.” Si OF-101 ya está inscrita, reiniciar el entorno demo local o escoger una oferta nueva.
+**Juan Riaño · demo:** “Ingreso con Ana y consulto las asignaturas abiertas. Selecciono una que conserve cupos y que no esté inscrita, por ejemplo Cálculo II (OF-102), si sigue disponible. Confirmo y compruebo que se añadió la matrícula y se redujo el cupo exactamente una unidad. Repito la solicitud para demostrar rechazo por duplicidad.” En la evidencia visual, Ana confirmó Estadística aplicada (EST102), correspondiente a la oferta OF-104. Antes de la demo revisar qué ofertas continúan disponibles y elegir una no inscrita. No reiniciar la instancia de nube sin necesidad.
 
 **Juan Riaño · alternativas:** “Las cuentas ficticias permiten reproducir bloqueo de paz y salvo, indisponibilidad financiera, prerrequisitos y cruces de horario. También existe una oferta sin cupos. La prueba E1 fuerza un error de persistencia desde tests para comprobar rollback; no expusimos esa falla como acción para usuarios.”
 
-**Juan Tibatá · QA:** “Las pruebas automatizadas unitarias y HTTP sumaron 26 y pasaron. Medimos 30 solicitudes locales de consulta de oferta: el p95 quedó por debajo de tres segundos, pero esto no valida desempeño cloud. Las 12 solicitudes de acceso indebido fueron rechazadas y 20 casos inválidos no dejaron cambios parciales. La ventana de disponibilidad cloud de 30 minutos está pendiente.”
+**Juan Tibatá · QA:** “Las pruebas automatizadas unitarias y HTTP sumaron 26 y pasaron. Medimos 30 solicitudes locales de consulta de oferta: el p95 quedó por debajo de tres segundos, pero esto no valida desempeño cloud. Las 12 solicitudes de acceso indebido fueron rechazadas y 20 casos inválidos no dejaron cambios parciales. La ventana RNF-02 se verificó: 30/30 respuestas HTTP 200 en 1.800 segundos desde la instancia de Render. Esto no equivale a pruebas de carga ni a un SLA productivo.”
 
 **Juan Tibatá · métricas:** “Calculamos complejidad ciclomática con una regla AST reproducible y la expresión v(G)=P+1. Reportamos valores para validación académica, servicio y repositorio. No informamos un DRE porcentual porque faltan datos reales de defectos anteriores y posteriores a la liberación.”
 
-**Laura · cierre:** “La principal contribución es la trazabilidad entre requisitos, diagramas, código y pruebas. El entregable contiene la configuración para publicarse en Render; para afirmar que el requisito cloud está cumplido debemos disponer de una URL operativa y su evidencia real.” Si la URL ya está operativa, sustituir esta última frase por el enlace efectivamente verificado.
+**Laura · cierre:** “La principal contribución es la trazabilidad entre requisitos, diagramas, código y pruebas. El prototipo ya se publicó en Render. El equipo documentó matrícula confirmada, rechazo financiero y 30/30 respuestas exitosas durante 30 minutos, con lo que RNF-02 se cumple para esa ventana de observación.” La URL documentada es https://educampus-lms-demo.onrender.com.
 
 ## Preguntas de defensa
 
@@ -47,7 +48,7 @@
 
 **¿Por qué no hay biometría real?** Porque el SRS autoriza simulaciones y exige privacidad, con cero imágenes o plantillas biométricas reales. La implementación de RF-04 no está incluida en el MVP.
 
-**¿Se cumplen todos los RNF?** No. RNF-01, 03 y 04 tienen evidencia local; RNF-05 se sustenta en revisión del código y datos ficticios. RNF-02 necesita medir 30 minutos en la instancia cloud.
+**¿Se cumplen todos los RNF?** No. RNF-01, 03 y 04 tienen evidencia local; RNF-05 se sustenta en revisión del código y datos ficticios. RNF-02 ya tiene medición de 30 minutos en Render: 30/30, conforme al umbral establecido.
 
 **¿Qué patrón de diseño utilizan?** Puerto/estrategia de pasarela financiera (`FinancialGateway` con adaptador `SimulatedFinancialGateway`) y repositorio para aislar persistencia. La arquitectura es deliberadamente mínima.
 
