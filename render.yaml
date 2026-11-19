@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: educampus-lms-demo
+    runtime: python
+    plan: free
+    rootDir: prototipo
+    buildCommand: "python -m compileall -q educampus"
+    startCommand: "python -m educampus --host 0.0.0.0 --port $PORT"
+    healthCheckPath: /api/health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.7
+      - key: EDUCAMPUS_DB
+        value: /tmp/educampus-demo.sqlite3
+      - key: EDUCAMPUS_HTTPS
+        value: "1"

@@ -1,0 +1,26 @@
+digraph G {
+ graph [label="EDUCAMPUS LMS  |  MÁQUINA DE ESTADOS — INSCRIPCIÓN", labelloc=t, fontsize=21, fontname="DejaVu Sans Bold", fontcolor="#123650", bgcolor="white", rankdir=LR, splines=polyline, ranksep=.9, nodesep=.52, pad=.3]
+ node [fontname="DejaVu Sans", shape=box, style="rounded,filled", color="#77A3B8", fillcolor="#EDF7FB", fontcolor="#123650", fontsize=13, margin=".19,.16"]
+ edge [fontname="DejaVu Sans", fontsize=10, color="#487991", fontcolor="#28485F", arrowsize=.7]
+ START [shape=circle, label="", width=.22, height=.22, fillcolor="#194765", color="#194765"]
+ SOL [label="SOLICITADA\nsolicitud recibida"]
+ subgraph cluster_validating {
+  label="VALIDANDO  («estado compuesto»)"; fontcolor="#0C7184"; color="#65A9B1"; style="rounded,dashed"; penwidth=1.5;
+  ACAD [label="Validación académica\ncupos · prerequisitos\nhorarios · duplicidad"]
+  FIN [label="Validación financiera\nPAZ_Y_SALVO / BLOQUEADO\nNO_DISPONIBLE"]
+  JOIN [shape=diamond, label="join", width=.55, height=.55, fillcolor="#D3ECEC"]
+  ACAD -> JOIN [label="resultado"]
+  FIN -> JOIN [label="resultado"]
+ }
+ COMMIT [label="CONFIRMADA\nmatrícula + cupo actualizados", fillcolor="#E1F4E7", color="#65AA85"]
+ REJECT [label="RECHAZADA\nsin cambios parciales", fillcolor="#FCEAEA", color="#C89090"]
+ END [shape=doublecircle, label="", width=.22, height=.22, fillcolor="#194765", color="#194765"]
+ START -> SOL [label="solicitarInscripcion()"]
+ SOL -> ACAD [label="fork / validarAcademia()"]
+ SOL -> FIN [label="fork / consultarPazSalvo()"]
+ JOIN -> COMMIT [label="[ambas favorables] / confirmarAtomicamente()"]
+ JOIN -> REJECT [label="[al menos una falla] / informarRechazo()"]
+ FIN -> REJECT [label="after(30s) [sin respuesta] / rechazar()", style=dashed, color="#B37C53", fontcolor="#9A603D"]
+ COMMIT -> END
+ REJECT -> END
+}

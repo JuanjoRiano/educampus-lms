@@ -1,0 +1,141 @@
+{
+  "method": "Python AST: each if/loop/except/conditional expression, short-circuit operand and comprehension increments P; v(G)=P+1",
+  "functions": [
+    {
+      "function": "_academic_rules",
+      "predicate_count": 8,
+      "vG": 9,
+      "decisions": [
+        {
+          "type": "if",
+          "line": 28,
+          "increment": 1
+        },
+        {
+          "type": "if",
+          "line": 30,
+          "increment": 1
+        },
+        {
+          "type": "if",
+          "line": 32,
+          "increment": 1
+        },
+        {
+          "type": "if",
+          "line": 41,
+          "increment": 1
+        },
+        {
+          "type": "if",
+          "line": 45,
+          "increment": 1
+        },
+        {
+          "type": "if",
+          "line": 53,
+          "increment": 1
+        },
+        {
+          "type": "short-circuit boolean",
+          "line": 30,
+          "increment": 1
+        },
+        {
+          "type": "comprehension loop",
+          "line": 42,
+          "increment": 1
+        }
+      ]
+    },
+    {
+      "function": "SQLiteEnrollmentRepository.confirm",
+      "predicate_count": 4,
+      "vG": 5,
+      "decisions": [
+        {
+          "type": "if",
+          "line": 98,
+          "increment": 1
+        },
+        {
+          "type": "if",
+          "line": 101,
+          "increment": 1
+        },
+        {
+          "type": "except",
+          "line": 106,
+          "increment": 1
+        },
+        {
+          "type": "except",
+          "line": 109,
+          "increment": 1
+        }
+      ]
+    },
+    {
+      "function": "EnrollmentService.execute",
+      "predicate_count": 12,
+      "vG": 13,
+      "decisions": [
+        {
+          "type": "if",
+          "line": 124,
+          "increment": 1
+        },
+        {
+          "type": "if",
+          "line": 142,
+          "increment": 1
+        },
+        {
+          "type": "if",
+          "line": 144,
+          "increment": 1
+        },
+        {
+          "type": "short-circuit boolean",
+          "line": 124,
+          "increment": 2
+        },
+        {
+          "type": "if",
+          "line": 128,
+          "increment": 1
+        },
+        {
+          "type": "short-circuit boolean",
+          "line": 128,
+          "increment": 1
+        },
+        {
+          "type": "conditional expression",
+          "line": 131,
+          "increment": 1
+        },
+        {
+          "type": "except",
+          "line": 139,
+          "increment": 1
+        },
+        {
+          "type": "conditional expression",
+          "line": 145,
+          "increment": 1
+        },
+        {
+          "type": "conditional expression",
+          "line": 146,
+          "increment": 1
+        },
+        {
+          "type": "conditional expression",
+          "line": 147,
+          "increment": 1
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="es"><head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#092e50"><title>EduCampus LMS · Demo CU-02</title>
+  <link rel="stylesheet" href="/styles.css"><script defer src="/app.js"></script>
+</head><body>
+  <div class="site-bar"><span class="brand-icon">E</span><span class="brand">EduCampus <b>LMS</b></span><span class="tag">PROTOTIPO ACADÉMICO</span><div class="grow"></div><span id="user-chip" class="user-chip hidden"></span><button id="logout" class="btn-secondary hidden" type="button">Cerrar sesión</button></div>
+  <main>
+    <section id="login-view" class="login-grid">
+      <div class="hero">
+        <div class="eyebrow">INGENIERÍA DE SOFTWARE I · GRUPO 5</div>
+        <h1>Tu gestión académica, <em>en un solo lugar.</em></h1>
+        <p>Prototipo demostrativo de inscripción de asignaturas. Comprueba cupos, prerrequisitos, horarios y paz y salvo financiero antes de confirmar.</p>
+        <div class="hero-features"><span>Validación académica</span><span>SistemaContable simulado</span><span>Inscripción atómica</span></div>
+        <div class="notice"><b>Alcance real:</b> este prototipo implementa CU-02 (RF-01 a RF-03). Asistencia biométrica y exámenes permanecen como requisitos documentados para fases posteriores. Todos los datos son ficticios.</div>
+      </div>
+      <div class="auth-card"><div class="eyebrow">ACCESO DE DEMOSTRACIÓN</div><h2>Iniciar sesión</h2><p>Elige un estudiante ficticio para demostrar distintos escenarios.</p>
+        <form id="login-form"><label for="username">Escenario / usuario</label><select id="username" required><option value="ana">Ana · paz y salvo (éxito)</option><option value="bruno">Bruno · bloqueo financiero</option><option value="camila">Camila · servicio no disponible</option><option value="diana">Diana · prerrequisito pendiente</option><option value="elias">Elías · cruce de horario</option><option value="profesor">Docente · control de acceso</option></select>
+          <label for="password">Contraseña de demostración</label><input id="password" type="password" required value="EduCampus2026!" autocomplete="off"><button type="submit" class="btn-primary" id="login-submit">Entrar al campus</button><p class="form-error" id="login-error" role="alert"></p></form>
+        <p class="fineprint">Datos sintéticos de uso académico. No ingreses datos ni contraseñas reales.</p>
+      </div>
+    </section>
+    <section id="dashboard" class="hidden">
+      <header class="page-header"><div><div class="eyebrow">PERIODO ACADÉMICO 2026-2 · DEMOSTRACIÓN</div><h1>Inscripción de asignaturas</h1><p id="welcome">Consulta tu oferta, valida condiciones y confirma tu matrícula.</p></div><div class="status-pill" id="finance-chip"></div></header>
+      <div class="metrics"><div class="metric"><span>Ofertas disponibles</span><strong id="stat-offerings">–</strong><small>Periodo 2026-2</small></div><div class="metric"><span>Mis inscripciones</span><strong id="stat-enrollments">–</strong><small>Confirmadas</small></div><div class="metric"><span>Integración externa</span><strong>SIM</strong><small>SistemaContable ficticio</small></div></div>
+      <div class="section-top"><div><h2>Oferta académica</h2><p>Selecciona una asignatura. El servidor verifica todas las reglas antes de confirmar.</p></div><button class="btn-secondary" id="refresh" type="button">Actualizar oferta</button></div>
+      <div id="teacher-notice" class="notice hidden">Este usuario tiene el rol DOCENTE. Por seguridad, no puede inscribir asignaturas ni consultar matrículas de estudiantes.</div>
+      <div class="table-wrap"><table><thead><tr><th>Asignatura</th><th>Grupo</th><th>Horario</th><th>Cupos</th><th>Estado</th><th>Acción</th></tr></thead><tbody id="offering-rows"></tbody></table></div>
+      <div class="section-top two"><div><h2>Mis inscripciones</h2><p>Registros confirmados vinculados únicamente al usuario autenticado.</p></div></div>
+      <div class="table-wrap"><table><thead><tr><th>Código</th><th>Asignatura</th><th>Horario</th><th>Estado</th></tr></thead><tbody id="enrollment-rows"></tbody></table></div>
+      <footer>EduCampus LMS · Grupo 5 · Universidad Sergio Arboleda · Simulador académico, no sistema universitario de producción.</footer>
+    </section>
+  </main>
+  <div id="toast" class="toast hidden" aria-live="polite" role="status"></div>
+  <dialog id="confirm-dialog"><form method="dialog"><div class="eyebrow">CONFIRMAR SOLICITUD</div><h2 id="confirm-title">Inscribir asignatura</h2><p id="confirm-desc"></p><div class="dialog-actions"><button class="btn-secondary" value="cancel">Cancelar</button><button class="btn-primary" id="confirm-yes" value="ok">Validar e inscribir</button></div></form></dialog>
+</body></html>

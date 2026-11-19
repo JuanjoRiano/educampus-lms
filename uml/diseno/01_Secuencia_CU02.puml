@@ -1,0 +1,52 @@
+@startuml
+' UML 2.5 design for CU-02. The diagram describes the current service and future refinements.
+title EduCampus LMS — CU-02 Inscribir asignatura
+actor Estudiante
+boundary "Interfaz Web" as UI
+control "Handler HTTP" as HTTP
+control "EnrollmentService" as Service
+control "AcademicValidator" as Validator
+participant "SistemaContable\n(simulador)" as Accounting <<external system>>
+entity "SQLiteEnrollmentRepository" as Repo
+database "SQLite" as DB
+
+Estudiante -> UI : seleccionar oferta y solicitar inscripción
+UI -> HTTP : POST /api/enroll (sesión + CSRF)
+HTTP -> HTTP : comprobar rol ESTUDIANTE y token
+HTTP -> Service : execute(studentId, offeringId)
+par Validación académica
+  Service -> Validator : check(studentId, offeringId)
+  Validator -> DB : consultar oferta, cupos y matrícula
+  loop por cada prerrequisito definido
+    Validator -> DB : verificar curso APROBADA
+  end
+  Validator --> Service : OK / error académico
+else Consulta financiera
+  Service -> Accounting : check(studentId, academicPeriodId)
+  Accounting --> Service : PAZ_Y_SALVO / BLOQUEADO / NO_DISPONIBLE
+end
+note right of Service : join: espera ambos resultados
+alt ambas validaciones favorables
+  Service -> Repo : confirm(studentId, offeringId)
+  Repo -> DB : BEGIN IMMEDIATE
+  Repo -> Validator : recheck bajo bloqueo de escritura
+  Validator -> DB : verificar reglas actualizadas
+  Repo -> DB : UPDATE remaining - 1 WHERE remaining > 0
+  Repo -> DB : INSERT inscripción CONFIRMADA
+  alt ambas escrituras correctas
+    Repo -> DB : COMMIT
+    Repo --> Service : inscripción confirmada
+    Service --> HTTP : matrícula registrada
+    HTTP --> UI : 201 + resultado
+  else excepción de persistencia
+    Repo -> DB : ROLLBACK
+    Repo --> Service : ERROR_PERSISTENCIA
+    Service --> HTTP : rechazo sin cambios parciales
+    HTTP --> UI : 500 + error
+  end
+else validación desfavorable
+  Service --> HTTP : error controlado (409 / 503)
+  HTTP --> UI : rechazo sin cambios
+end
+UI --> Estudiante : mostrar resultado
+@enduml

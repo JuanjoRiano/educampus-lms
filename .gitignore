@@ -1,28 +1,25 @@
-# Credenciales
+# Local configuration, credentials and runtime artifacts
 .env
 .env.*
 !.env.example
-*.pem
 *.key
-
-# Temporales
-*.log
-*.tmp
-.DS_Store
-Thumbs.db
-*~
-
-# Python
+*.pem
 __pycache__/
 *.py[cod]
 .venv/
 venv/
-
-# Node
+.pytest_cache/
+.coverage
+htmlcov/
+*.sqlite
+*.sqlite3
+*.db
+*.db-shm
+*.db-wal
+*.log
+.DS_Store
 node_modules/
 dist/
 coverage/
-
-# Editores
 .vscode/
 .idea/

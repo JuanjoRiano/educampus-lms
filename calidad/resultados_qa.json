@@ -1,0 +1,260 @@
+{
+  "utc_run": "2026-11-18T23:58:50.224651+00:00",
+  "environment": "local ephemeral SQLite / ThreadingHTTPServer; fictional data",
+  "rnf01": {
+    "operation": "GET /api/offerings authenticated",
+    "n": 30,
+    "p95_ms": 1.49,
+    "median_ms": 1.19,
+    "max_ms": 3.31,
+    "threshold_ms": 3000,
+    "pass": true
+  },
+  "rnf02": {
+    "health_checks": 30,
+    "successful_checks": 30,
+    "duration_minutes": 0.0006,
+    "target_window_minutes": 30,
+    "verified": false,
+    "note": "Short availability smoke check; not a continuous 30-minute measurement."
+  },
+  "rnf03": {
+    "total": 12,
+    "denied": 12,
+    "pass": true,
+    "cases": [
+      {
+        "case": "GET /api/offerings",
+        "status": 401,
+        "denied": true
+      },
+      {
+        "case": "GET /api/enrollments",
+        "status": 401,
+        "denied": true
+      },
+      {
+        "case": "POST /api/enroll",
+        "status": 401,
+        "denied": true
+      },
+      {
+        "case": "POST /api/logout",
+        "status": 401,
+        "denied": true
+      },
+      {
+        "case": "POST /api/enroll",
+        "status": 401,
+        "denied": true
+      },
+      {
+        "case": "POST /api/login",
+        "status": 401,
+        "denied": true
+      },
+      {
+        "case": "POST /api/login",
+        "status": 401,
+        "denied": true
+      },
+      {
+        "case": "POST /api/enroll without valid CSRF",
+        "status": 403,
+        "denied": true
+      },
+      {
+        "case": "POST /api/enroll without valid CSRF",
+        "status": 403,
+        "denied": true
+      },
+      {
+        "case": "POST /api/enroll without valid CSRF",
+        "status": 403,
+        "denied": true
+      },
+      {
+        "case": "POST /api/enroll without valid CSRF",
+        "status": 403,
+        "denied": true
+      },
+      {
+        "case": "GET /api/enrollments as teacher",
+        "status": 403,
+        "denied": true
+      }
+    ]
+  },
+  "rnf04": {
+    "total": 20,
+    "consistent": 20,
+    "pass": true,
+    "cases": [
+      {
+        "case": 1,
+        "actor": "ana",
+        "offering": "OF-105",
+        "code": "SIN_CUPOS",
+        "expected": "SIN_CUPOS",
+        "pass": true
+      },
+      {
+        "case": 2,
+        "actor": "diana",
+        "offering": "OF-102",
+        "code": "PRERREQUISITO",
+        "expected": "PRERREQUISITO",
+        "pass": true
+      },
+      {
+        "case": 3,
+        "actor": "elias",
+        "offering": "OF-103",
+        "code": "CRUCE_HORARIO",
+        "expected": "CRUCE_HORARIO",
+        "pass": true
+      },
+      {
+        "case": 4,
+        "actor": "elias",
+        "offering": "OF-101",
+        "code": "DUPLICADA",
+        "expected": "DUPLICADA",
+        "pass": true
+      },
+      {
+        "case": 5,
+        "actor": "bruno",
+        "offering": "OF-102",
+        "code": "BLOQUEO_FINANCIERO",
+        "expected": "BLOQUEO_FINANCIERO",
+        "pass": true
+      },
+      {
+        "case": 6,
+        "actor": "camila",
+        "offering": "OF-102",
+        "code": "FINANCIERO_NO_DISPONIBLE",
+        "expected": "FINANCIERO_NO_DISPONIBLE",
+        "pass": true
+      },
+      {
+        "case": 7,
+        "actor": "ana",
+        "offering": "OF-106",
+        "code": "OFERTA_CERRADA",
+        "expected": "OFERTA_CERRADA",
+        "pass": true
+      },
+      {
+        "case": 8,
+        "actor": "ana",
+        "offering": "unknown",
+        "code": "OFERTA_INEXISTENTE",
+        "expected": "OFERTA_INEXISTENTE",
+        "pass": true
+      },
+      {
+        "case": 9,
+        "actor": "ana",
+        "offering": "OF-105",
+        "code": "SIN_CUPOS",
+        "expected": "SIN_CUPOS",
+        "pass": true
+      },
+      {
+        "case": 10,
+        "actor": "diana",
+        "offering": "OF-102",
+        "code": "PRERREQUISITO",
+        "expected": "PRERREQUISITO",
+        "pass": true
+      },
+      {
+        "case": 11,
+        "actor": "elias",
+        "offering": "OF-103",
+        "code": "CRUCE_HORARIO",
+        "expected": "CRUCE_HORARIO",
+        "pass": true
+      },
+      {
+        "case": 12,
+        "actor": "elias",
+        "offering": "OF-101",
+        "code": "DUPLICADA",
+        "expected": "DUPLICADA",
+        "pass": true
+      },
+      {
+        "case": 13,
+        "actor": "bruno",
+        "offering": "OF-102",
+        "code": "BLOQUEO_FINANCIERO",
+        "expected": "BLOQUEO_FINANCIERO",
+        "pass": true
+      },
+      {
+        "case": 14,
+        "actor": "camila",
+        "offering": "OF-102",
+        "code": "FINANCIERO_NO_DISPONIBLE",
+        "expected": "FINANCIERO_NO_DISPONIBLE",
+        "pass": true
+      },
+      {
+        "case": 15,
+        "actor": "ana",
+        "offering": "OF-106",
+        "code": "OFERTA_CERRADA",
+        "expected": "OFERTA_CERRADA",
+        "pass": true
+      },
+      {
+        "case": 16,
+        "actor": "ana",
+        "offering": "unknown",
+        "code": "OFERTA_INEXISTENTE",
+        "expected": "OFERTA_INEXISTENTE",
+        "pass": true
+      },
+      {
+        "case": 17,
+        "actor": "ana",
+        "offering": "OF-105",
+        "code": "SIN_CUPOS",
+        "expected": "SIN_CUPOS",
+        "pass": true
+      },
+      {
+        "case": 18,
+        "actor": "diana",
+        "offering": "OF-102",
+        "code": "PRERREQUISITO",
+        "expected": "PRERREQUISITO",
+        "pass": true
+      },
+      {
+        "case": 19,
+        "actor": "elias",
+        "offering": "OF-103",
+        "code": "CRUCE_HORARIO",
+        "expected": "CRUCE_HORARIO",
+        "pass": true
+      },
+      {
+        "case": 20,
+        "actor": "elias",
+        "offering": "OF-101",
+        "code": "DUPLICADA",
+        "expected": "DUPLICADA",
+        "pass": true
+      }
+    ]
+  },
+  "rnf05": {
+    "real_biometric_templates": 0,
+    "real_facial_images": 0,
+    "note": "Source/data fixture inspection; only fictional identifiers. No camera/image endpoints are present."
+  }
+}

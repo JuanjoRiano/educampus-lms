@@ -1,0 +1,1 @@
+"""EduCampus LMS academic demonstrator."""

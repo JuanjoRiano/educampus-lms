@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1980" height="1550" viewBox="0 0 1980 1550">
+<rect x="0" y="0" width="1980" height="1550" rx="0" stroke="white" fill="#FFFFFF" stroke-width="1.7"/>
+<rect x="0" y="0" width="1980" height="14" fill="#0E7D88"/>
+<text x="70" y="68" fill="#113650" text-anchor="start" font-size="30" font-weight="bold" font-family="DejaVu Sans, sans-serif">EDUCAMPUS LMS  /  SECUENCIA CU-02</text>
+<text x="70" y="104" fill="#58768A" text-anchor="start" font-size="17" font-weight="normal" font-family="DejaVu Sans, sans-serif">UML 2.5 · par, loop, alt · Caso de uso Inscribir asignatura</text>
+<rect x="28" y="142" width="194" height="63" rx="8" stroke="#80A6B7" fill="#EDF6FA" stroke-width="1.7"/>
+<text x="125" y="168" fill="#1D455C" text-anchor="middle" font-size="14" font-weight="bold" font-family="DejaVu Sans, sans-serif">Estudiante</text>
+<line x1="125" y1="205" x2="125" y2="1455" stroke="#B5C9D3" stroke-width="1.7" stroke-dasharray='6 7'/>
+<rect x="278" y="142" width="194" height="63" rx="8" stroke="#80A6B7" fill="#EDF6FA" stroke-width="1.7"/>
+<text x="375" y="168" fill="#1D455C" text-anchor="middle" font-size="14" font-weight="bold" font-family="DejaVu Sans, sans-serif">Interfaz Web</text>
+<text x="375" y="191" fill="#1D455C" text-anchor="middle" font-size="14" font-weight="normal" font-family="DejaVu Sans, sans-serif">«boundary»</text>
+<line x1="375" y1="205" x2="375" y2="1455" stroke="#B5C9D3" stroke-width="1.7" stroke-dasharray='6 7'/>
+<rect x="528" y="142" width="194" height="63" rx="8" stroke="#80A6B7" fill="#EDF6FA" stroke-width="1.7"/>
+<text x="625" y="168" fill="#1D455C" text-anchor="middle" font-size="14" font-weight="bold" font-family="DejaVu Sans, sans-serif">HTTP Handler</text>
+<text x="625" y="191" fill="#1D455C" text-anchor="middle" font-size="14" font-weight="normal" font-family="DejaVu Sans, sans-serif">«boundary»</text>
+<line x1="625" y1="205" x2="625" y2="1455" stroke="#B5C9D3" stroke-width="1.7" stroke-dasharray='6 7'/>
+<rect x="803" y="142" width="194" height="63" rx="8" stroke="#80A6B7" fill="#EDF6FA" stroke-width="1.7"/>
+<text x="900" y="168" fill="#1D455C" text-anchor="middle" font-size="14" font-weight="bold" font-family="DejaVu Sans, sans-serif">EnrollmentService</text>
+<text x="900" y="191" fill="#1D455C" text-anchor="middle" font-size="14" font-weight="normal" font-family="DejaVu Sans, sans-serif">«control»</text>
+<line x1="900" y1="205" x2="900" y2="1455" stroke="#B5C9D3" stroke-width="1.7" stroke-dasharray='6 7'/>
+<rect x="1073" y="142" width="194" height="63" rx="8" stroke="#80A6B7" fill="#EDF6FA" stroke-width="1.7"/>
+<text x="1170" y="168" fill="#1D455C" text-anchor="middle" font-size="14" font-weight="bold" font-family="DejaVu Sans, sans-serif">AcademicValidator</text>
+<text x="1170" y="191" fill="#1D455C" text-anchor="middle" font-size="14" font-weight="normal" font-family="DejaVu Sans, sans-serif">«control»</text>
+<line x1="1170" y1="205" x2="1170" y2="1455" stroke="#B5C9D3" stroke-width="1.7" stroke-dasharray='6 7'/>
+<rect x="1333" y="142" width="194" height="63" rx="8" stroke="#80A6B7" fill="#EDF6FA" stroke-width="1.7"/>
+<text x="1430" y="168" fill="#1D455C" text-anchor="middle" font-size="14" font-weight="bold" font-family="DejaVu Sans, sans-serif">SistemaContable</text>
+<text x="1430" y="191" fill="#1D455C" text-anchor="middle" font-size="14" font-weight="normal" font-family="DejaVu Sans, sans-serif">«external»</text>
+<line x1="1430" y1="205" x2="1430" y2="1455" stroke="#B5C9D3" stroke-width="1.7" stroke-dasharray='6 7'/>
+<rect x="1623" y="142" width="194" height="63" rx="8" stroke="#80A6B7" fill="#EDF6FA" stroke-width="1.7"/>
+<text x="1720" y="168" fill="#1D455C" text-anchor="middle" font-size="14" font-weight="bold" font-family="DejaVu Sans, sans-serif">Repository + SQLite</text>
+<text x="1720" y="191" fill="#1D455C" text-anchor="middle" font-size="14" font-weight="normal" font-family="DejaVu Sans, sans-serif">«entity»</text>
+<line x1="1720" y1="205" x2="1720" y2="1455" stroke="#B5C9D3" stroke-width="1.7" stroke-dasharray='6 7'/>
+<line x1="125" y1="238" x2="375" y2="238" stroke="#52849A" stroke-width="2" />
+<path d="M 364 232 L 375 238 L 364 244" fill="none" stroke="#35657C" stroke-width="2"/>
+<text x="250.0" y="229" fill="#234E62" text-anchor="middle" font-size="14" font-weight="normal" font-family="DejaVu Sans, sans-serif">seleccionar oferta</text>
+<line x1="375" y1="287" x2="625" y2="287" stroke="#52849A" stroke-width="2" />
+<path d="M 614 281 L 625 287 L 614 293" fill="none" stroke="#35657C" stroke-width="2"/>
+<text x="500.0" y="278" fill="#234E62" text-anchor="middle" font-size="14" font-weight="normal" font-family="DejaVu Sans, sans-serif">POST /api/enroll</text>
+<line x1="625" y1="336" x2="900" y2="336" stroke="#52849A" stroke-width="2" />
+<path d="M 889 330 L 900 336 L 889 342" fill="none" stroke="#35657C" stroke-width="2"/>
+<text x="762.5" y="327" fill="#234E62" text-anchor="middle" font-size="14" font-weight="normal" font-family="DejaVu Sans, sans-serif">execute(estudiante, oferta)</text>
+<rect x="756" y="366" width="794" height="385" rx="0" stroke="#91ACBA" fill="none" stroke-width="1.7"/>
+<rect x="756" y="366" width="112" height="30" rx="0" stroke="#91ACBA" fill="#E8F3F6" stroke-width="1.7"/>
+<text x="768" y="387" fill="#1D455C" text-anchor="start" font-size="15" font-weight="bold" font-family="DejaVu Sans, sans-serif">par</text>
+<text x="886" y="387" fill="#617B8B" text-anchor="start" font-size="13" font-weight="normal" font-family="DejaVu Sans, sans-serif">Validaciones independientes; join espera ambas respuestas</text>
+<line x1="900" y1="418" x2="1170" y2="418" stroke="#52849A" stroke-width="2" />
+<path d="M 1159 412 L 1170 418 L 1159 424" fill="none" stroke="#35657C" stroke-width="2"/>
+<text x="1035.0" y="409" fill="#234E62" text-anchor="middle" font-size="14" font-weight="normal" font-family="DejaVu Sans, sans-serif">check(academia)</text>
+<rect x="1045" y="445" width="815" height="152" rx="0" stroke="#91ACBA" fill="none" stroke-width="1.7"/>
+<rect x="1045" y="445" width="112" height="30" rx="0" stroke="#91ACBA" fill="#E8F3F6" stroke-width="1.7"/>
+<text x="1057" y="466" fill="#1D455C" text-anchor="start" font-size="15" font-weight="bold" font-family="DejaVu Sans, sans-serif">loop</text>
+<text x="1163" y="469" fill="#1D455C" text-anchor="start" font-size="13" font-weight="normal" font-family="DejaVu Sans, sans-serif">por cada prerrequisito</text>
+<line x1="1170" y1="541" x2="1720" y2="541" stroke="#52849A" stroke-width="2" />
+<path d="M 1709 535 L 1720 541 L 1709 547" fill="none" stroke="#35657C" stroke-width="2"/>
+<text x="1445.0" y="532" fill="#234E62" text-anchor="middle" font-size="14" font-weight="normal" font-family="DejaVu Sans, sans-serif">consultar oferta y matrícula</text>
+<line x1="1170" y1="610" x2="900" y2="610" stroke="#52849A" stroke-width="2" stroke-dasharray='7 5'/>
+<path d="M 911 604 L 900 610 L 911 616" fill="none" stroke="#35657C" stroke-width="2"/>
+<text x="1035.0" y="601" fill="#234E62" text-anchor="middle" font-size="14" font-weight="normal" font-family="DejaVu Sans, sans-serif">OK / error académico</text>
+<line x1="756" y1="644" x2="1550" y2="644" stroke="#B7CCD5" stroke-width="1.2" />
+<text x="774" y="670" fill="#1D455C" text-anchor="start" font-size="14" font-weight="bold" font-family="DejaVu Sans, sans-serif">[rama financiera]</text>
+<line x1="900" y1="702" x2="1430" y2="702" stroke="#52849A" stroke-width="2" />
+<path d="M 1419 696 L 1430 702 L 1419 708" fill="none" stroke="#35657C" stroke-width="2"/>
+<text x="1165.0" y="693" fill="#234E62" text-anchor="middle" font-size="14" font-weight="normal" font-family="DejaVu Sans, sans-serif">check(paz y salvo)</text>
+<line x1="1430" y1="742" x2="900" y2="742" stroke="#52849A" stroke-width="2" stroke-dasharray='7 5'/>
+<path d="M 911 736 L 900 742 L 911 748" fill="none" stroke="#35657C" stroke-width="2"/>
+<text x="1165.0" y="733" fill="#234E62" text-anchor="middle" font-size="14" font-weight="normal" font-family="DejaVu Sans, sans-serif">PAZ_Y_SALVO / BLOQUEADO / NO_DISPONIBLE</text>
+<rect x="500" y="781" width="1380" height="609" rx="0" stroke="#91ACBA" fill="none" stroke-width="1.7"/>
+<rect x="500" y="781" width="112" height="30" rx="0" stroke="#91ACBA" fill="#E8F3F6" stroke-width="1.7"/>
+<text x="512" y="802" fill="#1D455C" text-anchor="start" font-size="15" font-weight="bold" font-family="DejaVu Sans, sans-serif">alt</text>
+<text x="630" y="802" fill="#617B8B" text-anchor="start" font-size="13" font-weight="normal" font-family="DejaVu Sans, sans-serif">Evaluación conjunta tras join</text>
+<text x="522" y="821" fill="#1D455C" text-anchor="start" font-size="14" font-weight="bold" font-family="DejaVu Sans, sans-serif">[ambas favorables]</text>
+<line x1="900" y1="857" x2="1720" y2="857" stroke="#52849A" stroke-width="2" />
+<path d="M 1709 851 L 1720 857 L 1709 863" fill="none" stroke="#35657C" stroke-width="2"/>
+<text x="1310.0" y="848" fill="#234E62" text-anchor="middle" font-size="14" font-weight="normal" font-family="DejaVu Sans, sans-serif">confirm(estudiante, oferta)</text>
+<line x1="1720" y1="903" x2="1720" y2="903" stroke="#52849A" stroke-width="2" />
+<path d="M 1731 897 L 1720 903 L 1731 909" fill="none" stroke="#35657C" stroke-width="2"/>
+<text x="1720.0" y="894" fill="#234E62" text-anchor="middle" font-size="14" font-weight="normal" font-family="DejaVu Sans, sans-serif">BEGIN IMMEDIATE / revalidar reglas</text>
+<line x1="1720" y1="954" x2="1720" y2="954" stroke="#52849A" stroke-width="2" />
+<path d="M 1731 948 L 1720 954 L 1731 960" fill="none" stroke="#35657C" stroke-width="2"/>
+<text x="1720.0" y="945" fill="#234E62" text-anchor="middle" font-size="14" font-weight="normal" font-family="DejaVu Sans, sans-serif">UPDATE cupos + INSERT matrícula</text>
+<line x1="1720" y1="1004" x2="900" y2="1004" stroke="#52849A" stroke-width="2" stroke-dasharray='7 5'/>
+<path d="M 911 998 L 900 1004 L 911 1010" fill="none" stroke="#35657C" stroke-width="2"/>
+<text x="1310.0" y="995" fill="#234E62" text-anchor="middle" font-size="14" font-weight="normal" font-family="DejaVu Sans, sans-serif">COMMIT: confirmada</text>
+<line x1="900" y1="1051" x2="625" y2="1051" stroke="#52849A" stroke-width="2" stroke-dasharray='7 5'/>
+<path d="M 636 1045 L 625 1051 L 636 1057" fill="none" stroke="#35657C" stroke-width="2"/>
+<text x="762.5" y="1042" fill="#234E62" text-anchor="middle" font-size="14" font-weight="normal" font-family="DejaVu Sans, sans-serif">201 inscripción confirmada</text>
+<line x1="625" y1="1095" x2="375" y2="1095" stroke="#52849A" stroke-width="2" stroke-dasharray='7 5'/>
+<path d="M 386 1089 L 375 1095 L 386 1101" fill="none" stroke="#35657C" stroke-width="2"/>
+<text x="500.0" y="1086" fill="#234E62" text-anchor="middle" font-size="14" font-weight="normal" font-family="DejaVu Sans, sans-serif">confirmación</text>
+<line x1="500" y1="1122" x2="1880" y2="1122" stroke="#B7CCD5" stroke-width="1.5" stroke-dasharray='6 5'/>
+<text x="522" y="1150" fill="#1D455C" text-anchor="start" font-size="14" font-weight="bold" font-family="DejaVu Sans, sans-serif">[una falla académica, financiera o de persistencia]</text>
+<line x1="900" y1="1190" x2="625" y2="1190" stroke="#52849A" stroke-width="2" stroke-dasharray='7 5'/>
+<path d="M 636 1184 L 625 1190 L 636 1196" fill="none" stroke="#35657C" stroke-width="2"/>
+<text x="762.5" y="1181" fill="#234E62" text-anchor="middle" font-size="14" font-weight="normal" font-family="DejaVu Sans, sans-serif">rechazar / ROLLBACK si aplica</text>
+<line x1="625" y1="1244" x2="375" y2="1244" stroke="#52849A" stroke-width="2" stroke-dasharray='7 5'/>
+<path d="M 386 1238 L 375 1244 L 386 1250" fill="none" stroke="#35657C" stroke-width="2"/>
+<text x="500.0" y="1235" fill="#234E62" text-anchor="middle" font-size="14" font-weight="normal" font-family="DejaVu Sans, sans-serif">respuesta 201 / 409 / 503 / 500</text>
+<line x1="375" y1="1301" x2="125" y2="1301" stroke="#52849A" stroke-width="2" stroke-dasharray='7 5'/>
+<path d="M 136 1295 L 125 1301 L 136 1307" fill="none" stroke="#35657C" stroke-width="2"/>
+<text x="250.0" y="1292" fill="#234E62" text-anchor="middle" font-size="14" font-weight="normal" font-family="DejaVu Sans, sans-serif">mostrar resultado</text>
+<text x="65" y="1360" fill="#667B88" text-anchor="start" font-size="14" font-weight="normal" font-family="DejaVu Sans, sans-serif">El diagrama incluye el flujo ejecutado y sus rutas de excepción; en el simulador financiero no hay API externa real.</text>
+</svg>
